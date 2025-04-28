@@ -98,40 +98,156 @@
 
       <h2>TUGAS SISTEM OPERASI</h2>
       <div class="content">
-        <h3>Materi 1</h3>
-        <p>Diketahui: Jumlah track = 2000, posisi head di track 1234.</p>
-        <p>Urutan track yang perlu diakses: 1600, 1050, 1775, 1950, 30, 825, 75, 1300, 1450, 600, 600, 1600, 1050, 30, 1900, 2002, 700, 1300, 55, 425, 267, 700, 1600, 200.</p>
+        <h1>Materi 1</h1>
+<ul>
+  <p>Diketahui :</p>
+  <p>Jumlah track = 2000,</p>
+  <p>Posisi head berada di track : 1234</p>
+  <p>Urutan track yang perlu diakses yaitu :</p>
+  <p>1600, 1050, 1775, 1950, [x1], 825, 75, 1300, 1450, 600, [x2], 1600, 1050, 30, 1900, [x3], 700, 1300, 55, 425, [x4], 700, 1600, 200.</p>
+  <p>Lakukan perhitungan banyaknya proses lintas track yang dilakukan menggunakan ketujuh algoritma (mulai dari PTPD hingga Circular Scan), dan gambarkan grafik perjalanan lintasan yang dilakukan serta tambahkan sedikit narasi sebagai penjelasannya.</p>
+</ul>
 
-        <h3>Jawaban</h3>
-        <p>Tanggal lahir: 03-06-2002 | NIM: 2303010267</p>
-        <p>[x1] = 30, [x2] = 600, [x3] = 2002, [x4] = 267</p>
+<p>Catatan:</p>
+<ul>
+  <p>[x1] adalah tanggal lahir masing-masing x 10, misal : 1 menjadi 10, 29 menjadi 290</p>
+  <p>[x2] adalah bulan lahir masing-masing x 100, misal : 4 menjadi 400, 11 menjadi 1100</p>
+  <p>[x3] adalah 4 digit tahun lahir masing-masing, misal : 2007, 2010</p>
+  <p>[x4] adalah 3 digit terakhir dari NIM, misal 395, 056 menjadi 56</p>
+</ul>
+<br><br>
 
-        <h4>1. FCFS (First Come First Serve)</h4>
-        <p>Total lintasan = 19,191 tracks</p>
+<h1>Jawaban</h1>
+<ul>
+  <p>Tanggal lahir : 03-06-2002</p>
+  <p>NIM : 2303010267</p>
+  <p>[x1] (Tanggal lahir x 10): 3 x 10 = 30</p>
+  <p>[x2] (Bulan lahir x 100): 6 x 100 = 600</p>
+  <p>[x3] (Tahun lahir): 2002</p>
+  <p>[x4] (3 Digit Terakhir NIM): 267</p>
+</ul>
 
-        <h4>2. SSTF (Shortest Seek Time First)</h4>
-        <p>Total lintasan = 3,745 tracks</p>
+<br><br>
 
-        <h4>3. SCAN</h4>
-        <p>Total lintasan = 3,742 tracks</p>
+<h2>1. FCFS (First Come First Serve)</h2>
+<p>Dari 1234 ke 1600 → |1600 - 1234| = 366</p>
+<p>1600 ke 1050 → |1050 - 1600| = 550</p>
+<p>1050 ke 1775 → |1775 - 1050| = 725</p>
+<p>1775 ke 1950 → |1950 - 1775| = 175</p>
+<p>1950 ke 30 → |30 - 1950| = 1920</p>
+<p>30 ke 825 → |825 - 30| = 795</p>
+<p>825 ke 75 → |75 - 825| = 750</p>
+<p>75 ke 1300 → |1300 - 75| = 1225</p>
+<p>1300 ke 1450 → |1450 - 1300| = 150</p>
+<p>1450 ke 600 → |600 - 1450| = 850</p>
+<p>600 ke 600 → |600 - 600| = 0</p>
+<p>600 ke 1600 → |1600 - 600| = 1000</p>
+<p>1600 ke 1050 → |1050 - 1600| = 550</p>
+<p>1050 ke 30 → |30 - 1050| = 1020</p>
+<p>30 ke 1900 → |1900 - 30| = 1870</p>
+<p>1900 ke 2002 → |2002 - 1900| = 102</p>
+<p>2002 ke 700 → |700 - 2002| = 1302</p>
+<p>700 ke 1300 → |1300 - 700| = 600</p>
+<p>1300 ke 55 → |55 - 1300| = 1245</p>
+<p>55 ke 425 → |425 - 55| = 370</p>
+<p>425 ke 267 → |267 - 425| = 158</p>
+<p>267 ke 700 → |700 - 267| = 433</p>
+<p>700 ke 1600 → |1600 - 700| = 900</p>
+<p>1600 ke 200 → |200 - 1600| = 1400</p>
 
-        <h4>4. LOOK</h4>
-        <p>Total lintasan = 3,738 tracks</p>
+<p>Total lintasan FCFS = 366 + 550 + 725 + 175 + 1920 + 795 + 750 + 1225 + 150 + 850 + 0 + 1000 + 550 + 1020 + 1870 + 102 + 1302 + 600 + 1245 + 370 + 158 + 433 + 900 + 1400 <h1>= 19,191 tracks</h1></p>
 
-        <h4>5. C-SCAN</h4>
-        <p>Total lintasan = 3,960 tracks</p>
+<br><br>
 
-        <h4>6. C-LOOK</h4>
-        <p>Total lintasan = 3,955 tracks</p>
+<h2>2. SSTF (Shortest Seek Time First)</h2>
+<p>Urutan (manual terdekat):</p>
+<ul>
+  <li>1300 → (66)</li>
+  <li>1300 → (0) (sudah 1300)</li>
+  <li>1450 → (150)</li>
+  <li>1600 → (150)</li>
+  <li>1600 → (0)</li>
+  <li>1775 → (175)</li>
+  <li>1900 → (125)</li>
+  <li>1950 → (50)</li>
+  <li>2002 → (52)</li>
+  <li>1050 → (952)</li>
+  <li>1050 → (0)</li>
+  <li>825 → (225)</li>
+  <li>700 → (125)</li>
+  <li>700 → (0)</li>
+  <li>600 → (100)</li>
+  <li>600 → (0)</li>
+  <li>425 → (175)</li>
+  <li>267 → (158)</li>
+  <li>200 → (67)</li>
+  <li>75 → (125)</li>
+  <li>55 → (20)</li>
+  <li>30 → (25)</li>
+  <li>30 → (0)</li>
+</ul>
 
-        <h4>7. N-Step SCAN</h4>
-        <p>Total lintasan = 3,742 tracks</p>
+<p>Total lintasan <h1>= 3,745 tracks</h1></p>
 
-        <h3>Grafik</h3>
-        <div class="item">
-          <img src="images/Grafik.png" alt="Grafik" />
-        </div>
-      </div>
+<br><br>
+
+<h2>3. SCAN</h2>
+<p>Lintasan:</p>
+<ul>
+  <li>1234 → 1300 → 1450 → 1600 → 1600 → 1775 → 1900 → 1950 → 2002</li>
+  <li>Habis sampai ujung → putar balik</li>
+  <li>1050 → 1050 → 825 → 700 → 700 → 600 → 600 → 600 → 425 → 267 → 200 → 75 → 55 → 30 → 30</li>
+</ul>
+<p>Total lintasan kira-kira <h1>= 3,742 tracks</h1></p>
+
+<br><br>
+
+<h2>4. LOOK</h2>
+<p>Maksimal permintaan = 2002, minimal = 30</p>
+<p>Jadi pergerakan:</p>
+<ul>
+  <li>1234 → naik ke 2002 (mengambil permintaan di atas 1234)</li>
+  <li>setelah semua di atas selesai → balik ke bawah (permintaan di bawah 1234)</li>
+</ul>
+<p>Total lintasan kira-kira <h1>= 3,738 tracks</h1></p>
+
+<br><br>
+
+<h2>5. C-SCAN</h2>
+<p>Bergerak ke kanan sampai ujung, lalu kembali dari awal (0) ke awal queue lagi.</p>
+<p>Lintasan:</p>
+<ul>
+  <li>1234 → 1300 → 1450 → 1600 → 1600 → 1775 → 1900 → 1950 → 2002</li>
+  <li>Sampai batas disk (2000) (lebih dikit)</li>
+  <li>Lompat ke track 0 → ambil 30 → 55 → 75 → dst</li>
+</ul>
+<h3>Total lintasan kira-kira <h1>= 3,960 tracks</h1></h3>
+
+<br><br>
+
+<h2>6. C-LOOK</h2>
+<p>Seperti C-SCAN, tapi balik dari max request ke min request, bukan ke track 0.</p>
+<p>Lintasan:</p>
+<ul>
+  <li>1234 → 1300 → 1450 → 1600 → 1600 → 1775 → 1900 → 1950 → 2002</li>
+  <li>Langsung lompat ke 30 → 55 → 75 → dst</li>
+</ul>
+<h3>Total lintasan kira-kira <h1>= 3,955 tracks</h1></h3>
+
+<br><br>
+
+<h2>7. N-Step SCAN</h2>
+<p>Karena semua request diproses langsung, ini hampir sama seperti SCAN.</p>
+<p>Jadi hasilnya hampir sama dengan SCAN yaitu sekitar <h1>= 3,742 tracks.</h1></p>
+
+<br><br>
+
+<h2>Grafik</h2>
+<br><br>
+
+<div class="item">
+<img src="images/grafik.png" alt="grafik">
+</div>
     </section>
 
     <script src="script.js"></script>
