@@ -3,51 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website Tugas RPL</title>
+    <title>Website Tugas</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">MyWebsite</div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#gallery">Tugas</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
       <h1>Welcome to My Website</h1>
       <p>Agung Nugraha</p>
     </header>
 
+    <!-- Tentang -->
     <section id="about">
       <h2>Tentang Saya</h2>
-      <p>Saya Mahasiswa dari Universitas Perjuangan, Fakultas Teknik, Prodi Informatika. Hobi saya bermain futsal dan menulis.</p>
+      <div class="about-container">
+        <div class="profile-img">
+          <img src="images/foto aing.jpg" alt="foto aing" />
+        </div>
+        <p>Saya Mahasiswa dari Universitas Perjuangan, Fakultas Teknik, Prodi Informatika. Hobi saya bermain futsal dan menulis.</p>
+      </div>
     </section>
 
+    <!-- Gallery -->
     <section id="gallery">
       <h2>TUGAS 1</h2>
       <div class="gallery">
-        <img src="images/pool.jpg" alt="" />
-        <img src="images/dfd0.jpg" alt="" />
-        <h1>DFD Level 0</h1>
-        <img src="images/dfd lvl1.jpg" alt="" />
-        <h1>DFD Level 1</h1>
-        <img src="images/erd.jpg" alt="" />
-        <h1>ERD</h1>
+        <div class="item">
+          <img src="images/pool.jpg" alt="Pool" />
+        </div>
+        <div class="item">
+          <img src="images/dfd0.jpg" alt="DFD Level 0" />
+          <h3>DFD Level 0</h3>
+        </div>
+        <div class="item">
+          <img src="images/dfd lvl1.jpg" alt="DFD Level 1" />
+          <h3>DFD Level 1</h3>
+        </div>
+        <div class="item">
+          <img src="images/erd.jpg" alt="ERD" />
+          <h3>ERD</h3>
+        </div>
       </div>
+
       <h2>TUGAS 2</h2>
       <div class="gallery">
-        <h2>Penjelasan Flowmap Proses Cash Replenishment Mesin ATM</h2>
-        <img src="images/Penjelasan A.jpg" alt="" style="padding-bottom: 10rem" />
-        <img src="images/activity diagram A.jpg" style="padding-bottom: 20px" />
-        <img src="images/class diagram A.jpg" alt="" style="padding-bottom: 20px" />
-        <img src="images/sequence diagram A.jpg" alt="" style="padding-bottom: 20px" />
-        <img src="images/use case diagram A.jpg" alt="" style="padding-bottom: 10rem" />
-        <h2>Penjelasan Flowmap Pemeliharaan Mesin ATM</h2>
-        <img src="images/penjelasan B.jpg" alt="" />
-        <img src="images/pnjlsn b.jpg" alt="" />
-        <img src="images/activity diagram B.jpg" alt="" />
-        <img src="images/class.jpg" alt="" />
-        <img src="images/squenc.jpg" alt="" />
-        <img src="images/use case diagram B.jpg" alt="" />
+        <div class="item">
+          <img src="images/Penjelasan A.jpg" alt="Penjelasan A" />
+        </div>
+        <div class="item">
+          <img src="images/activity diagram A.jpg" alt="Activity Diagram A" />
+        </div>
+        <div class="item">
+          <img src="images/class diagram A.jpg" alt="Class Diagram A" />
+        </div>
+        <div class="item">
+          <img src="images/sequence diagram A.jpg" alt="Sequence Diagram A" />
+        </div>
+        <div class="item">
+          <img src="images/use case diagram A.jpg" alt="Use Case Diagram A" />
+        </div>
+
+        <div class="item">
+          <img src="images/penjelasan B.jpg" alt="Penjelasan B" />
+        </div>
+        <div class="item">
+          <img src="images/pnjlsn b.jpg" alt="Penjelasan B 2" />
+        </div>
+        <div class="item">
+          <img src="images/activity diagram B.jpg" alt="Activity Diagram B" />
+        </div>
+        <div class="item">
+          <img src="images/class.jpg" alt="Class Diagram B" />
+        </div>
+        <div class="item">
+          <img src="images/squenc.jpg" alt="Sequence Diagram B" />
+        </div>
+        <div class="item">
+          <img src="images/use case diagram B.jpg" alt="Use Case Diagram B" />
+        </div>
+      </div>
+
+      <h2>TUGAS SISTEM OPERASI</h2>
+      <div class="content">
+        <h3>Materi 1</h3>
+        <p>Diketahui: Jumlah track = 2000, posisi head di track 1234.</p>
+        <p>Urutan track yang perlu diakses: 1600, 1050, 1775, 1950, 30, 825, 75, 1300, 1450, 600, 600, 1600, 1050, 30, 1900, 2002, 700, 1300, 55, 425, 267, 700, 1600, 200.</p>
+
+        <h3>Jawaban</h3>
+        <p>Tanggal lahir: 03-06-2002 | NIM: 2303010267</p>
+        <p>[x1] = 30, [x2] = 600, [x3] = 2002, [x4] = 267</p>
+
+        <h4>1. FCFS (First Come First Serve)</h4>
+        <p>Total lintasan = 19,191 tracks</p>
+
+        <h4>2. SSTF (Shortest Seek Time First)</h4>
+        <p>Total lintasan = 3,745 tracks</p>
+
+        <h4>3. SCAN</h4>
+        <p>Total lintasan = 3,742 tracks</p>
+
+        <h4>4. LOOK</h4>
+        <p>Total lintasan = 3,738 tracks</p>
+
+        <h4>5. C-SCAN</h4>
+        <p>Total lintasan = 3,960 tracks</p>
+
+        <h4>6. C-LOOK</h4>
+        <p>Total lintasan = 3,955 tracks</p>
+
+        <h4>7. N-Step SCAN</h4>
+        <p>Total lintasan = 3,742 tracks</p>
+
+        <h3>Grafik</h3>
+        <div class="item">
+          <img src="images/Grafik.png" alt="Grafik" />
+        </div>
       </div>
     </section>
 
-    <footer>
-      <p>© 2024 [AgungNugraha]. Semua Hak Dilindungi.</p>
-    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
